@@ -16,3 +16,6 @@ Then download or just copy the code in the "whitespace.py" file and run it.
 Enter the sentence in the terminal and BE QUICK because after 5 seconds it will start typing. So after entering the string you have 5 seconds to select the text area where you want that code to be written.
 
 Now, you would have your secret code written.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
