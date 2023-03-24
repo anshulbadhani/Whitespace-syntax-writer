@@ -5,20 +5,11 @@ author -> anshulbadhani
 
 https://github.com/anshulbadhani/Whitespace-syntax-writer
 """
-
+# Imports 
 import time
 import pyautogui as pg
 
-
-# def toBinary(char: str)-> str: # ASCII to BINARY
-#     asciiCode = ord(char)
-#     binary = bin(asciiCode)
-
-#     n = binary[2::]
-#     # x = [i for i in n]
-
-#     return n
-
+# Functions
 def debug(message: str | int) -> str | int:
     """
     Only for showing which print statement
@@ -28,13 +19,16 @@ def debug(message: str | int) -> str | int:
 
 toBinary = lambda a : str(bin(ord(a))) # 'string' datatype to BINARY
 
+# Main program starts here
+# Taking input
 
-sentence = input("Enter the sentence : ")
+sentence = input("""Enter the sentence : """)
 charLis = [i for i in sentence]
 # debug(toBinary(sentence))
 
-
-print("ONLY 5 SECONDS LEFT AFTER 5 SECONDS PYTHON WILL START TYPING...")
+# Warning Message
+print("""ONLY 5 SECONDS LEFT AFTER 5 SECONDS PYTHON WILL START TYPING...
+SWITCH TO TEXT AREA WHERE YOU HAVE TO TYPE THE MESSAGE...""")
 time.sleep(5) # The program will wait for 5 seconds
 
 
@@ -46,9 +40,8 @@ for chars in charLis:
     bit = [bits for bits in binCode]
     # debug(bit)
 
-
     # printing value of each byte (for whitespaces)
-    pg.typewrite("  ") # stack manupulation by pushing value in stack
+    pg.typewrite("  ") # Pushing value into stack via stack manupulation
     for j in bit:
         match j:
             case "0":
@@ -60,5 +53,7 @@ for chars in charLis:
     pg.typewrite("\n")
     pg.typewrite("\t\n  .")
 
-pg.typewrite("\n\n\n")
-pg.typewrite(">")
+pg.typewrite("\n\n\n") # Marks the end of the program (Whitespace formatting convention)
+pg.typewrite(">") # To make the invisible code visible
+
+# ----- END ----- #
